@@ -1,0 +1,13 @@
+<h1>Login</h1>
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+
+  <%= f.label :password %>
+  <%= f.text_field :password %><br>
+
+  <%= button_tag "Login" %>
+<% end %>
+<%= form_for(:users, url: new_user_path, method: :get) do |f| %>
+  <%= button_tag "Create Account" %>
+<% end %>
